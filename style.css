@@ -1,0 +1,65 @@
+/*
+    Fluid Typgraphy formula
+    Source: https://css-tricks.com/snippets/css/fluid-typography/
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+    font-size: calc(3rem + (6rem - 3rem) * ((100vw - 35rem) / (1650px - 350px)));
+    font-size: calc(3rem + 30 * ((100vw - 35rem) / (1300)));
+    
+    Notes:
+        root element font size (1 rem): 10px
+        all units must be the same size
+        * divisor must be same units as font size, but without the units expressed
+*/
+
+*{
+    box-sizing: border-box;
+    background-color: #678047;
+    color: #d1d5db;
+}
+
+body{
+    font-family: "Roboto", Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.top-buffer{
+    height: 5vw;
+}
+
+.bottom-buffer{
+    height: 5vw;
+}
+
+.calc-container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    margin: 0 auto;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: #807447;
+    border-radius: 2rem;
+    background-color: #807447;
+    width: 55rem;
+    height: 65rem;
+}
+
+.calc-container > div{
+    background-color: #807447;
+}
+
+/*Below is for the footer*/
+footer{
+    /* background-color: #4e4e4e; */
+    padding: calc(0.8rem + 7 * ((100vw - 50rem) / (1150))) 0; /*15px to 8px*/
+    text-align: center;
+}
+
+footer > a{
+    color:#FFFFFF;
+    /* background-color: #807447; */
+    text-decoration: none;
+    font-size: calc(1rem + 10 * ((100vw - 50rem) / (1150))); /*20px to 10px*/
+}
