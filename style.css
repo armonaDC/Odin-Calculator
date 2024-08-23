@@ -12,10 +12,14 @@
         * divisor must be same units as font size, but without the units expressed
 */
 
+/* FIXME: Add a breakpoint for large window size calculator sizing  */
+/* FIXME: Add responsive sizing for the calculator and top/bottom margins */
+
 *{
     box-sizing: border-box;
     background-color: #678047;
     color: #d1d5db;
+    font-size: calc(3rem + 30 * ((100vw - 35rem) / (1300)));
 }
 
 body{
@@ -33,9 +37,9 @@ body{
 }
 
 .calc-container{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around; */
+    justify-content: space-around;
     margin: 0 auto;
     border-width: 1rem;
     border-style: solid;
@@ -46,8 +50,24 @@ body{
     height: 65rem;
 }
 
-.calc-container > div{
-    background-color: #807447;
+.calc-display{
+    background-color: #678047;
+}
+
+.button-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    border-style: solid;
+    border-color: #FFFFFF;
 }
 
 /*Below is for the footer*/
